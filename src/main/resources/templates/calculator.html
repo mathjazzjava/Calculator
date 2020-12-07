@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="~{layout}">
+    <head>
+        <title>Kalkulator</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}" href="/static/css/style.css"/>
+    </head>
+    <body>
+      <section layout:fragment="content">
+        <form action="/calculator" method="post" th:object="${calculatorForm}">
+            <table> <caption>Kalkulator</caption>
+                <tr >
+                    <td>Liczba x = </td>
+                    <td><input type="text" class="input_calc" th:field="*{x}" th:errorClass="error" autocomplete="off" /></td>
+                    <td>Liczba y = </td>
+                    <td><input type="text" class="input_calc" th:field="*{y}" th:errorClass="error" autocomplete="off" /></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Działanie: </td>
+                    <td align="center"><button type="submit" name="operation" value="+" >+</button>
+                    <button type="submit" name="operation" value="-" >-</button></td>
+
+                    <td rowspan="2"><a href="/advanced"><button type="button" style="height:122px; width: 60px">>></button></a></td>
+                    <td rowspan="2" style="vertical-align: top; text-align: center;">
+                        <span style="color: #ff0000;" th:if="${#fields.hasErrors('x') or #fields.hasErrors('y')}">Podaj liczbę!</span></td>
+                </tr>
+                <tr>
+                    <td align="center"><button type="submit" name="operation" value="*" >*</button>
+                    <button type="submit" name="operation" value="/">/</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="center"><a href="/calculator"><button type="button" style="width:124px; height:60px; margin-bottom: 10px;">CE</button></a></td>
+                </tr>
+                <tr>
+                    <td>Wynik: </td>
+                    <td colspan="3" class="result">
+                        <div th:object="${calculatorForm}" th:text="(${result}==null)? '' : (*{x} +' ' +*{operation} +' ' +*{y} +' = ' +${result})">
+                        </div>
+                     </td>
+                </tr>
+            </table>
+        </form>
+        <!--<a href="/" onclick="alert('Kliknięto link strony głównej!')">Strona główna</a>-->
+      </section>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="~{layout}">
+    <head>
+        <title>Kalkulator ułamków</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}" href="/static/css/style.css"/>
+        <style>
+            table {padding: 15px 15px 15px 15px;}
+            
+                        
+        </style>
+    </head>
+    <body>
+        <section layout:fragment="content">
+           
+            <form action="/fractions" method="post" th:object="${fractionsForm}">
+            <table class="input_frac"><caption>Kalkulator ułamków</caption>
+                <tr>    
+                    <td rowspan="3"><input class="input_frac" style="height: 100px; font-size: 40px;" autocomplete="off"
+                                           type="text"  th:field="*{a}" th:errorClass="error"/></td>
+
+                    <td><input class="input_frac" type="text"  th:field="*{b}" th:errorClass="error" autocomplete="off"/></td>
+
+                    <td rowspan="3"><input class="input_frac_operation" type="text"  th:field="*{operation}" th:errorClass="error" autocomplete="off"/></td>
+
+                    <td rowspan="3"><input class="input_frac" style="height: 100px; font-size: 40px;" type="text"  th:field="*{x}" th:errorClass="error" autocomplete="off"/></td>
+
+                    <td><input class="input_frac" type="text"  th:field="*{y}" th:errorClass="error" autocomplete="off"/></td>
+
+                    <td rowspan="3"><button type="submit" class="button_result">=</button></td>
+
+                    <td rowspan="3"><div class="result_frac" style="height: 100px; font-size: 40px;" th:text="${resultWhoNum}"></div></td>   <!--wynik całości-->
+                    <td><div class="result_frac" th:text="${resultNum}"></div></td>    <!--wynik licznik-->
+                </tr>
+                <tr>
+                    <td><hr class="fraction_bar"/></td>
+                    <td><hr class="fraction_bar"/></td>
+                    <td><hr class="fraction_bar"/></td>
+                </tr>
+                <tr>    
+                    <td><input class="input_frac" type="text"  th:field="*{c}" th:errorClass="error" autocomplete="off"/></td>
+                    <td><input class="input_frac" type="text"  th:field="*{z}" th:errorClass="error" autocomplete="off"/></td>
+                    <td><div class="result_frac" th:text="${resultDen}"></div></td>   <!--Wynik mianownik-->
+                </tr>
+                <tr style="color: #ff0000">
+                    <td colspan="6" >
+                        <p><span th:if="${#fields.hasErrors('a')}">Błędne dane!</span></p>
+                        <p><span th:if="${#fields.hasErrors('b')}">Błędne dane!</span></p>
+                        <p><span th:if="${#fields.hasErrors('c')}">Błędne dane!</span></p>
+                        <p th:text="(${myError}==null)? '' : ${myError}"></p>
+                        <p><span th:if="${#fields.hasErrors('x')}" th:errors="*{x}">Błędne dane</span></p>
+                        <p><span th:if="${#fields.hasErrors('y')}" th:errors="*{y}">Błędne dane</span></p>
+                        <p><span th:if="${#fields.hasErrors('z')}" th:errors="*{z}">Błędne dane</span></p>
+                    </td>
+                    <td align="center" colspan="8"><a href="/fractions"><button type="button" style="width:124px; height:60px; margin-top:20px">CE</button></a></td>
+                </tr>
+                
+                    
+                
+            </table>
+            </form>
+            
+        </section>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ulaq.net.nz/web/thymeleaf/layout"
+      layout:decorate="~{layout}">
+    <head>
+        <title>Logowanie</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section layout:fragment="content">
+            <h2>Logowanie</h2>
+            <div class="clr_container">
+                <form>
+                    <input type="text" placeholder="login" onfocus="this.placeholder=''" onblur="this.placeholder='login'"/>
+                    <input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'"/>
+                    <input type="submit" value="Zaloguj się"/>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

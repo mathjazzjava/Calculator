@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="~{layout}">>
+    <head>
+        <title>Kalkulator</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section layout:fragment="content">
+          <form action="/advanced" method="post" th:object="${calculatorForm}">
+            <table><caption>Kalkulator zaawansowany</caption>
+                <tr>    
+                    <td>Liczba x = </td>
+                    <td><input type="text" class="input_calc" th:field="*{x}" th:errorClass="error" autocomplete="off" /></td>
+                    <td colspan="3" style="text-align: center; color: #ff0000;"><span th:if="${#fields.hasErrors('x')}" th:errors="*{x}">Błędne dane</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Działanie: </td>
+                    <td align="center"><button type="button" name="operation" value="+" >+</button>
+                    <button type="button" name="operation" value="-" >-</button></td>
+                    
+                    <td align="center"><button type="submit" name="operation" value="sqrt" >√</button>
+                        <button type="submit" name="operation" value="^2" >^2</button></td>
+                    
+                    <td align="center"><button type="submit" name="operation" value="sin">sin</button>
+                    <button type="submit" name="operation" value="cos">cos</button></td>
+                    
+                    <td rowspan="2"><a href="/calculator"><button type="button" style="height:122px; width: 60px"><<</button></a></td>
+                </tr>
+                <tr>
+                    <td align="center"><button type="button" name="operation" value="*">*</button>
+                    <button type="button" name="operation" value="/">/</button></td>
+
+                    <td align="center"><button type="submit" name="operation" value="%">%</button>
+                    <button type="submit" name="operation" value="!">!</button></td>
+
+                    <td align="center"><button type="submit" name="operation" value="tg">tg</button>
+                    <button type="submit" name="operation" value="ln">ln</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="center"><a href="/advanced"><button type="button" style="width:124px; height:60px; margin-bottom: 10px;">CE</button></a></td>
+                </tr>
+                <tr>
+                    <td>Wynik: </td>
+                    <td colspan="4" class="result" 
+                        th:text="((${result==null})? '' :
+                         ((((*{operation=='sqrt'}) or (*{operation=='^2'})) or ((*{operation=='%'}) or (*{operation=='!'})))? 
+                        (*{x} +*{operation} +' = ' +${result}) : (*{operation} +'(' +*{x} +')' +' = ' +${result})))">
+                    </td>
+                </tr>
+            </table>  
+          </form>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+    <head>
+        <title>Kalkulator</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section layout:fragment="content">
+            <h2 style="text-align: center;">Wybierz kalkulator zwykły, zaawansowany lub ułamków!</h2>
+                <a href="/calculator"><img th:src="@{images/calcbasic.png}" src=".../resources/static/images/calcbasic.png"
+                                           alt="obrazek" style="float: left; padding: 10px 5px 10px 0;"/></a>
+                <a href="/advanced"><img th:src="@{images/calcadvanced.png}" src=".../resources/static/images/calcadvanced.png"
+                                         alt="obrazek" style="float: left; padding: 50px 5px 10px 0px;"/></a>
+                <a href="/fractions"><img th:src="@{images/calcfractions.png}" src=".../resources/static/images/calcfractions.png"
+                                          2alt="obrazek" style="float: left; padding: 90px 5px 10px 0px;"/></a>
+        </section>
+    </body>
+</html>

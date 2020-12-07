@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Kalkulator</title>
+<!--    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Kalkulator</title>-->
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
+</head>
+
+<body>
+     
+    <div class="container">
+
+        <header>
+            <img th:src="@{images/header.jpg}" src=".../resources/static/images/header.jpg" alt="obrazek"/>
+            
+        </header>
+        <div class="box_header">
+            <input type="text" placeholder="Szukaj" style="margin: 10px 0 10px 0;"/>
+            <a href="/registration"><input type="submit" value="Rejestracja" style="margin: 10px 0 10px 0; width: 120px; align: right;"/></a>
+            <a href="/logging"><input type="submit" value="Zaloguj" style="margin: 10px 0 10px 0; width: 120px;"/></a>
+        </div>
+        
+<aside>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/calculator">Kalkulator podstawowy</a></li>
+            <li><a href="/advanced">Kalkulator zaawansowany</a></li>
+            <li><a href="/fractions">Kalkulator ułamków</a></li>
+            <li><a href="contact">Kontakt</a></li>
+        </ul>
+    </nav>
+</aside>
+
+
+<section id="main">
+    
+    <div layout:fragment="content">Zawartość kolejnych stron.
+    </div>
+    
+</section>
+
+<div class="push"></div>
+
+</div>
+
+<footer>
+    <p>Kalkulator  2020</p>
+</footer>
+
+</body>
+</html>

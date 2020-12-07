@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ulaq.net.nz/web/thymeleaf/layout"
+      layout:decorate="~{layout}">
+    <head>
+        <title>Kontakt</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section layout:fragment="content">
+            <h2>Kontakt</h2>
+            <div class="clr_container">
+                <form action="mailto:mathjazzjava@gmail.com?subject=Kalkulator" method="post"><!-- enctype="text/plain" onsubmit="if (check(this)) return true; return false">-->
+                    <input type="text" placeholder="nick" onfocus="this.placeholder=''" onblur="this.placeholder='nick'"/>
+                    <textarea rows="10" placeholder="Tutaj napisz wiadomość..." onfocus="this.placeholder=''" 
+                              onblur="this.placeholder='Tutaj napisz wiadomość...'"></textarea>
+                    <input type="submit" value="Wyślij" style="width: 88px; padding: 10px 0 10px 0"/>
+                    <input type="reset" value="Delete" style="width: 88px; padding: 10px 0 10px 0"/>
+                </form>
+            </div>
+        <!--<a href="/" onclick="alert('Kliknięto link sony głównej!')">Sona główna</a>-->
+        </section>
+    </body>
+</html>
