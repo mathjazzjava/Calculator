@@ -5,6 +5,15 @@ public class CalculatorForm {
     private Double y;
     private String operation;
 
+    public CalculatorForm(Double x, Double y, String operation) {
+        this.x = x;
+        this.y = y;
+        this.operation = operation;
+    }
+
+    public CalculatorForm() {
+    }
+
     public Double getX() {
         return x;
     }

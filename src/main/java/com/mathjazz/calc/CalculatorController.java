@@ -26,12 +26,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
         
         @RequestMapping("/advanced")
         public String advancedHome() {
-            return "advancedCalculator";
+            return "advanced-calculator";
         }
         
         @RequestMapping("/fractions")
         public String fractions() {
-            return "fractionsCalculator";
+            return "fractions-calculator";
         }
         
         @RequestMapping("/contact")
@@ -48,7 +48,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
         public String registration() {
             return "registration";
         }
-        
+
         @PostMapping("/calculator")
         public String doCalculation(Model model, CalculatorForm form, BindingResult binding) {
             if ((binding.hasErrors()) || ((form.getX()==null) || (form.getY()==null))) {
@@ -84,7 +84,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
         @PostMapping("/advanced")
         public String doAdvancedCalculation(Model model, CalculatorForm form, BindingResult binding) {
             if (binding.hasErrors() || form.getX()==null) {
-                return "advancedCalculator";
+                return "advanced-calculator";
             }
             double result=0;
             switch(form.getOperation()) {
@@ -118,7 +118,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
             model.addAttribute("form", form);
             model.addAttribute("result", result);
             
-            return "advancedCalculator";
+            return "advanced-calculator";
         
         }
         
@@ -127,7 +127,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
             int resultWhoNum, resultNum, resultDen;
             myError=null;
             if (binding.hasErrors()) {
-                return "fractionsCalculator";
+                return "fractions-calculator";
             }
             else {
                 switch(form.getOperation()) {
@@ -157,7 +157,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
             model.addAttribute("myError", myError);
             
                         
-            return "fractionsCalculator";
+            return "fractions-calculator";
         }    
         
         @GetMapping("/calculator")
@@ -167,11 +167,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
         @GetMapping("/advanced")
         public String doAdvancedCalculation(CalculatorForm form) {
-            return "advancedCalculator";
+            return "advanced-calculator";
         }
         
         @GetMapping("/fractions")
         public String doFractionsCalculation(FractionsForm form) {
-            return "fractionsCalculator";
+            return "fractions-calculator";
+        }
+
+        @RequestMapping("/build-fraction")
+        public String build() {
+            return "build-fraction";
         }
     }
