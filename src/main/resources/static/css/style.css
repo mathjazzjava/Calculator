@@ -151,7 +151,7 @@ nav {}
 	margin: 15px auto 15px auto;
 	padding: 0;
 	text-align: center;
-	border: 1px solid steelblue;
+	/*border: 1px solid steelblue;*/
 }
 
 .container_content h2 {
