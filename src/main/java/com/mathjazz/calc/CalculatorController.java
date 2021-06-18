@@ -176,7 +176,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
         }
 
         @RequestMapping("/build-fraction")
-        public String build() {
+        public String buildFraction() {
             return "build-fraction";
+        }
+
+        @RequestMapping("/read-fraction")
+        public String readFraction() {
+            return "read-fraction";
         }
     }

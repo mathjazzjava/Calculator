@@ -9,12 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
 </head>
-
 <body>
-     
 <div class="container">
-
 <header>
+    <h1 class="h1_header">Ułamki &nbsp zwykłe</h1>
     <div class="find_register_login">
                 <input type="text" placeholder="Szukaj" style="margin: 13px 10px 10px 0;"/>
                 <a href="/registration"><input type="submit" value="Rejestracja" style="margin: 10px 10px 10px 0; width: 120px; align: right;"/></a>
@@ -22,68 +20,65 @@
     </div>
 </header>
     <div style="clear: both;"></div>
-<nav>
-    <div class="header_menu">
+<div class="top_menu">
+    <nav>
         <ol>
             <li><a href="/">Home</a></li>
             <li><a href="/calculator">Kalkulator</a>
                 <ul>
-                    <li style="width: 140px;"><a href="/calculator"/>Podstawowy</li>
-                    <li style="width: 140px;"><a href="/advanced"/>Zaawansowany</li>
-                    <li style="width: 140px;"><a href="/fractions"/>Ułamkowy</li>
+                    <li style="width: 140px;"><a href="/calculator"/>Podstawowy</a></li>
+                    <li style="width: 140px;"><a href="/advanced"/>Zaawansowany</a></li>
+                    <li style="width: 140px;"><a href="/fractions"/>Ułamkowy</a></li>
                 </ul>
             </li>
-            <li><a href="#">Kalkulator ułamków</a></li>
-            <li><a href="#">Ułamki podstawy</a>
+            <li><a href="/fractions">Kalkulator ułamków</a></li>
+            <li><a href="/build-fraction">Ułamki podstawy</a>
                 <ul>
-                    <li><a href="/build-fraction"/>Budowa ułamka</li>
-                    <li><a href="/"/>Czytanie ułamków</li>
-                    <li><a href="/"/>Ułamek jako iloraz</li>
-                    <li><a href="/"/>Rodzaje ułamków zwykłych</li>
-                    <li><a href="/"/>Zamiana liczby mieszanej na ułamek niewłaściwy</li>
-                    <li><a href="/"/>Wyłączanie całości</li>
-                    <li><a href="/"/>Rozszerzanie ułamków zwykłych</li>
-                    <li><a href="/"/>Skracanie ułamków zwykłych</li>
-                    <li><a href="/"/>Sprowadzanie do wspólnego mianownika</li>
-                    <li><a href="/"/>Porównywanie ułamków zwykłych</li>
+                    <li><a href="/build-fraction"/>Budowa ułamka</a></li>
+                    <li><a href="/read-fraction"/>Czytanie ułamków</a></li>
+                    <li><a href="/build-fraction"/>Ułamek jako iloraz</a></li>
+                    <li><a href="/build-fraction"/>Rodzaje ułamków zwykłych</a></li>
+                    <li><a href="/build-fraction"/>Zamiana liczby mieszanej na ułamek niewłaściwy</a></li>
+                    <li><a href="/build-fraction"/>Wyłączanie całości</a></li>
+                    <li><a href="/build-fraction"/>Rozszerzanie ułamków zwykłych</a></li>
+                    <li><a href="/build-fraction"/>Skracanie ułamków zwykłych</a></li>
+                    <li><a href="/build-fraction"/>Sprowadzanie do wspólnego mianownika</a></li>
+                    <li><a href="/build-fraction"/>Porównywanie ułamków zwykłych</a></li>
                 </ul>
             </li>
-            <li><a href="/">Ułamki działania</a>
+            <li><a href="/build-fraction">Ułamki działania</a>
                 <ul>
-                    <li><a href="/"/>Dodawanie ułamków o jednakowych mianownikach</li>
-                    <li><a href="/"/>Dodawanie ułamków o różnych mianownikach</li>
-                    <li><a href="/"/>Odejmowanie ułamków o jednakowych mianownikach</li>
-                    <li><a href="/"/>Odejmowanie ułamków o różnych mianownikach</li>
-                    <li><a href="/"/>Odejmowanie ułamków - przypadki specjalne</li>
-                    <li><a href="/"/>Mnożenie ułamków przez liczbę naturalną</li>
-                    <li><a href="/"/>Mnożenie ułamków</li>
-                    <li><a href="/"/>Odwrotność ułamka</li>
-                    <li><a href="/"/>Dzielenie ułamków</li>
+                    <li><a href="/build-fraction"/>Dodawanie ułamków o jednakowych mianownikach</a></li>
+                    <li><a href="/build-fraction"/>Dodawanie ułamków o różnych mianownikach</a></li>
+                    <li><a href="/build-fraction"/>Odejmowanie ułamków o jednakowych mianownikach</a></li>
+                    <li><a href="/build-fraction"/>Odejmowanie ułamków o różnych mianownikach</a></li>
+                    <li><a href="/build-fraction"/>Odejmowanie ułamków - przypadki specjalne</a></li>
+                    <li><a href="/build-fraction"/>Mnożenie ułamków przez liczbę naturalną</a></li>
+                    <li><a href="/build-fraction"/>Mnożenie ułamków</a></li>
+                    <li><a href="/build-fraction"/>Odwrotność ułamka</a></li>
+                    <li><a href="/build-fraction"/>Dzielenie ułamków</a></li>
 
                 </ul>
             </li>
-            <li><a href="/">Ułamki dodatek</a>
+            <li><a href="/build-fraction">Ułamki dodatek</a>
                 <ul>
-                    <li><a href=""/>Obliczanie ułamka liczby</li>
-                    <li><a href=""/>Zamiana na ułamek dziesiętny</li>
-                    <li><a href=""/>Zamiana na ułamek dziesiętny cz 2</li>
-                    <li><a href=""/>Ciekawostki o ułamkach</li>
+                    <li><a href="/build-fraction">Obliczanie ułamka liczby</a></li>
+                    <li><a href="/build-fraction">Zamiana na ułamek dziesiętny</a></li>
+                    <li><a href="/build-fraction">Zamiana na ułamek dziesiętny cz 2</a></li>
+                    <li><a href="/build-fraction">Ciekawostki o ułamkach</a></li>
                 </ul>
             </li>
             <li><a href="/contact">Kontakt</a></li>
-            <li style="width: 50px;"><a href="/login"><img th:src="@{images/icon_log.png}"
+            <li style="width: 50px;"><a href="/logging"><img th:src="@{images/icon_log.png}"
                         src=".../resources/static/images/icon_log.png"/></a></li>
-            <li style="width: 50px;"><a href="/find"><img th:src="@{images/icon_find.png}"
+            <li style="width: 50px;"><a href="#"><img th:src="@{images/icon_find.png}"
                         src=".../resources/static/images/icon_find.png"/></a></li>
         </ol>
-    </div>
-</nav>
+    </nav>
+</div>
     <div style="clear: both;"></div>
-<section id="main">
-    <div layout:fragment="content">Zawartość kolejnych stron.
-    </div>
-</section>
-
+    <div layout:fragment="content" class="container_content">Zawartość kolejnych stron.</div>
+    <div class="push"></div>
 <footer>
     <p>Kalkulator  2021</p>
 </footer>

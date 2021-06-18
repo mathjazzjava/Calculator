@@ -9,15 +9,41 @@
     </head>
     <body>
         <section layout:fragment="content">
-            <h2 style="text-align: center;">Wybierz kalkulator zwykły, zaawansowany lub ułamków!</h2>
-
-                <a href="/calculator"><img th:src="@{images/calcbasic.png}" src=".../resources/static/images/calcbasic.png"
-                                           alt="obrazek" style="padding: 20px 5px 10px 0;"/></a>
-                <a href="/advanced"><img th:src="@{images/calcadvanced.png}" src=".../resources/static/images/calcadvanced.png"
-                                         alt="obrazek" style="padding: 40px 5px 10px 0px;"/></a>
-                <a href="/fractions"><img th:src="@{images/calcfractions.png}" src=".../resources/static/images/calcfractions.png"
-                                          2alt="obrazek" style="padding: 0px 5px 10px 0px;"/></a>
-
+            <main>
+            <h2 style="text-align: center;">Wybierz kalkulator zwykły, zaawansowany, ułamkowy lub ucz się ułamków!</h2><br>
+            <div class="home_box">
+                <h3>Kalkulator podstawowy</h3>
+                <a href="/calculator"><img th:src="@{images/calcbasic.png}"
+                                       src=".../resources/static/images/calcbasic.png" alt="obrazek"d/></a>
+            </div>
+            <div class="home_box">
+                <h3>Kalkulator zaawansowany</h3>
+                <a href="/advanced"><img th:src="@{images/calcadvanced.png}"
+                                     src=".../resources/static/images/calcadvanced.png" alt="obrazek"/></a>
+            </div>
+            <div class="home_box">
+                <h3>Kalkulator ułamków</h3>
+                <a href="/fractions"><img th:src="@{images/calcfractions.png}"
+                                           src=".../resources/static/images/calcfractions.png" alt="obrazek"/></a>
+            </div>
+            <div class="home_box">
+                <h3>Nauka ułamków - podstawy</h3>
+                <p>W tej części dowiesz się z jakich elementów składa się ułamek zwykły, co one oznaczają
+                    oraz po co w ogóle są nam ułamki. Nauczysz się prawidłowo je odczytywać.
+                    Poznasz także podstawowe operacje na ułamkach.
+                </p>
+            </div>
+            <div class="home_box">
+                <h3>Nauka ułamków - działania</h3>
+                <p>Jeśli chcesz nauczyć się działań na ułamkach zwykłych, to dobrze trafiłeś.
+                    W opanowaniu umiejętności z tej części niestety potrzebna będzie wiedza z podstaw ułamków.
+                </p>
+            </div>
+            <div class="home_box">
+                <h3>Ułamki - ciekawostki</h3>
+                <p>W tym miejscu znajdują się dodatkowe informacje o ułamkach. </p>
+            </div>
+            </main>
         </section>
     </body>
 </html>
