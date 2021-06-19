@@ -19,7 +19,7 @@ body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	/*margin:0 auto -55px;*/
+	/*margin:0 auto -30px;*/
 	margin-bottom: -30px;
 	width: 100%;
 }
@@ -34,12 +34,12 @@ header {
 
 .h1_header {
 	position: absolute;
-	right: 450px;
+	right: 420px;
 	top: 0;
 	line-height: 178px;
 	vertical-align: middle;
-	color: #616161;
-	font-size: 40px;
+	color: #7c7c7c;
+	font-size: 48px;
 	font-weight: bold;
 }
 
@@ -190,16 +190,21 @@ main {}
 	text-indent: 10px;
 }
 
+.home_box a {
+	display: block;
+	text-decoration: none;
+}
+
 .left {
 	/*display: table-cell;*/
 	float: left;
 	width: 75%;
 	margin: 0px;
-	padding: 10px 10px 10px 10px;
+	padding: 12px;
 	text-align: left;
 	font-size: medium;
 	color: #696969; /*#777777;*/
-	background: #e7e7e7;
+	background: #ededed;
 	/*border: 1px solid red;*/
 }
 
@@ -208,11 +213,11 @@ main {}
 	float: right;
 	width: 20%;
 	margin: 0px;
-	padding: 10px 10px 10px 10px;
+	padding: 12px;
 	text-align: left;
 	font-size: medium;
 	color: #696969;
-	background: #dddddd;
+	background: #ededed;
 	/*border: 1px solid blue;*/
 }
 
